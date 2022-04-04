@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoWeb</title>
+    <link rel="stylesheet" href="staticfiles/style.css">
+    <!-- Load in 3d viewer script -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<h1>Hello!</h1>
+<h2>Welcome to Go Web.</h2>
+<a href="http://localhost:8080/more">More</a>
+<body>
+<!-- make sure to use 'noopener noreferrer' on hrefs that open a new tab to prevent tabnabbing! -->
+<p>I made this using <a href="https://github.com/gin-gonic/gin" target="_blank" rel="noopener noreferrer">Gin</a>, a web framework written in Golang.</p>
+<p>Here's some 3D models I've made for this class. Click to rotate and view the model.</p>
+<div class = modelstuff>
+    <model-viewer
+            name = "viewer"
+            class = "modelview"
+            alt="Go Gopher Model"
+            src="staticfiles/gogopher.glb"
+            camera-controls enable-pan
+            environment-image="staticfiles/HDR_112_River_Road_2_Env.hdr"
+            shadow-intensity="0.5">
+    </model-viewer>
+    <div class = modelinfo>
+        <select class = "myDropdown" onchange="switchModel()">
+            <option class = "myDropdown-content" value = "gogopher" selected>Gopher</option>
+            <option class = "myDropdown-content" value = "goblin">Goblin</option>
+            <option class = "myDropdown-content"  value = "pizzaroll">Pizza Roll</option>
+        </select>
+        <p class = "viewertag">This is the Go Gopher. He's the mascot of the Go programming language!</p>
+        <img class = "viewergif" src = "staticfiles/gogopher.gif" alt = "PixelImage"/>
+    </div>
+</div>
+<p>Like this 3D model viewer? It was pretty simple to set up using this <a href="https://modelviewer.dev/" target='_blank' rel='noopener noreferrer'>Model Viewer</a> widget!</p>
+<img class = "gopher" src="staticfiles/gogopher.gif" alt = "gopher"/>
+<script type="text/javascript" src="staticfiles/myScript.js"></script>
+</body>
+</html>

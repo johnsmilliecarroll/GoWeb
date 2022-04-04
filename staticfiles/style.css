@@ -1,0 +1,52 @@
+
+body {
+    max-width: 700px;
+    margin: auto;
+    background-color: #ffd59c;
+    font-family: "Lucida Console", sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+.myDropdown {
+    position: relative;
+    display: inline-block;
+    font-family: "Lucida Console", sans-serif;
+}
+.myDropdown-content {
+    background-color: #c8e8ff;
+    min-width: 160px;
+    font-family: "Lucida Console", sans-serif;
+}
+
+.viewertag {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+.viewergif {
+    width: 168px;
+    heigh: 168px;
+    image-rendering: pixelated;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.modelstuff{
+    display: flex;
+}
+
+.modelinfo {
+    width: 200px;
+}
+
+.modelview {
+    flex: 1;
+    width: 400px;
+    height: 400px;
+}
